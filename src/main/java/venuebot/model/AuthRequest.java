@@ -13,17 +13,16 @@ import venuebot.model.enums.LoginTypes;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@JsonRootName("RegisterRequest")
+@JsonRootName("AuthRequest")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 //@JsonPropertyOrder({ "name", "id" })
 //@JsonPropertyOrder(alphabetic=true)
-public class RegisterRequest {
+public class AuthRequest {
 
-	CustomerUser user;
+	private String otp;
 	private String mac;
 	private String ip;
 	private LoginTypes loginType;
 	private LoginDevice loginDevice;
-
 
 }

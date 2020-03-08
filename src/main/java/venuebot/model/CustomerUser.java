@@ -3,13 +3,11 @@ package venuebot.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import venuebot.model.enums.LoginDevice;
-import venuebot.model.enums.LoginTypes;
+import venuebot.model.enums.Gender;
 
 @Data
 @AllArgsConstructor
@@ -25,6 +23,7 @@ public class CustomerUser {
     private String knownAs;
     private String email;
     private String phone;
+    private Gender gender;
     private int dobYear;
     private int dobMonth;
     private int dobDay;

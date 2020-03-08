@@ -28,7 +28,7 @@ public class LoginResponse {
      * 201 - Success , see responseString for the accessToken, and full customer data is returned
      */
     private int responseCode;
-    private String responseString;
-    private CustomerUser user;
+    private String responseText;
+    private String accessToken;
 
 }

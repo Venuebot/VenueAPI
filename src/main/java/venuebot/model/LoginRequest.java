@@ -23,6 +23,8 @@ public class LoginRequest {
 
 	private String email;
 	private String phone;
+	private String mac;
+	private String ip;
 	private LoginTypes loginType;
 	private LoginDevice loginDevice;
 

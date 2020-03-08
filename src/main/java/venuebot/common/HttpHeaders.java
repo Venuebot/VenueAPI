@@ -15,7 +15,7 @@ import lombok.Setter;
 public class HttpHeaders {
     private String Authorization;
     private String audience;
-    private String client_Id;
+    private String mac_Id;
     private String content_Type;
     private String ip_Address;
 
