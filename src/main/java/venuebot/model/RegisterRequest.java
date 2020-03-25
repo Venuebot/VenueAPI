@@ -24,6 +24,7 @@ public class RegisterRequest {
 	private String ip;
 	private LoginTypes loginType;
 	private LoginDevice loginDevice;
+	private String venueName;
 
 
 }

@@ -52,6 +52,17 @@ public class AuthServiceBasic {
 		return new ResponseEntity<LoginResponse>(response,HttpStatus.OK);
 	}
 
+	/**
+	 *
+	 * @param request: Register Business
+	 * @return Access Token in Response Str
+	 */
+	@RequestMapping(value="/registerBusiness",method=RequestMethod.POST)
+	public ResponseEntity<LoginResponse> registerBusiness(@RequestBody RegisterRequest request)  {
+		LoginResponse response=service.registerBusiness(request);
+		return new ResponseEntity<LoginResponse>(response,HttpStatus.OK);
+	}
+
 
 }
 

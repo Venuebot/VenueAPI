@@ -45,6 +45,9 @@ public class AuthServ {
 
         }
     }
+    public LoginResponse registerBusiness(RegisterRequest request){
+        return LoginResponse.builder().responseCode(RespondCodes.SUCCESS.getCode()).responseText("We received your request. Please check your e-mail to complete your registration ").build();
+    }
     public AuthResponse validateAccessToken(AuthRequest req,String accessToken) {
 
 
