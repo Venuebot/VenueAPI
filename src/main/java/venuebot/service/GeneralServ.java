@@ -1,6 +1,7 @@
 package venuebot.service;
 
 import org.springframework.stereotype.Service;
+import venuebot.model.GetMenuResponse;
 import venuebot.model.GetVenueListRequest;
 import venuebot.model.GetVenueListResponse;
 import venuebot.model.Venue;
@@ -40,6 +41,16 @@ public class GeneralServ {
                     GetVenueListResponse.builder().venuesFav(listFav).venuesRecents(listRecent).venuesNearBy(listNearBy).build();
 
         }
+    }
+
+    public GetMenuResponse getMenuResponse(int venueId) {
+
+       return GetMenuResponse.builder().foodsList(DemoBuffer.ht_products_foods.get(venueId))
+               .drinksList(DemoBuffer.ht_products_drinks.get(venueId))
+               .drinksList(DemoBuffer.ht_products_desserts.get(venueId))
+               .dealsList(DemoBuffer.ht_products_deals.get(venueId))
+               .venue(DemoBuffer.ht_venues.get(venueId))
+        .build();
     }
 
 

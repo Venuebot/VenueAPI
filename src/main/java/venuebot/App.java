@@ -1,6 +1,8 @@
 package venuebot;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import venuebot.model.Venue;
+import venuebot.model.product.Product;
+import venuebot.temp.tempGeneral;
 import venuebot.util.DemoBuffer;
 
 /// This is the main Spring Boot application - converted into web servlet to make it web app deployable
@@ -23,6 +27,7 @@ public class App  {
         ApplicationContext context = SpringApplication.run(App.class, args);
         logger.info("Venuebot Services started "+LocalDateTime.now());
         initVenueLists();
+        initVenueMenu();
         Thread.sleep(50000);
     }
 
@@ -41,8 +46,11 @@ public class App  {
         DemoBuffer.ht_venues.put(11,new Venue(11,"Waffle Cafe","184 Moorgate, London EC2M 1A",0.4,"miles",""));
         DemoBuffer.ht_venues.put(12,new Venue(12,"yeni ay balik","183 Moorgate, London EC2M 1A",0.4,"miles",""));
 
-
-
+    }
+    private static void initVenueMenu(){
+        List<Product> list=new ArrayList<>();
+        list.add(tempGeneral.product1());
+        DemoBuffer.ht_products_foods.put(1,list);
     }
 
 }

@@ -1,7 +1,10 @@
 package venuebot.util;
 
+import io.swagger.models.auth.In;
 import venuebot.model.CustomerUser;
 import venuebot.model.Venue;
+import venuebot.model.product.Deal;
+import venuebot.model.product.Product;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -20,4 +23,8 @@ public class DemoBuffer {
 
     public static Hashtable<Integer,Venue> ht_venues=new Hashtable<>();
 
+    public static Hashtable<Integer,List<Product>> ht_products_foods =new Hashtable<>();
+    public static Hashtable<Integer,List<Product>> ht_products_drinks =new Hashtable<>();
+    public static Hashtable<Integer,List<Product>> ht_products_desserts =new Hashtable<>();
+    public static Hashtable<Integer,List<Deal>> ht_products_deals =new Hashtable<>();
 }
