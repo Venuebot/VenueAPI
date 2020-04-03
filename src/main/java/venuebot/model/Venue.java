@@ -20,4 +20,5 @@ public class Venue {
     private double distance;
     private String distanceUnit;
     private String imgUri;
+    private String headerImgUri;
 }

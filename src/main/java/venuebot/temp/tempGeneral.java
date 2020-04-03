@@ -64,17 +64,119 @@ public class tempGeneral {
                         .suggestions(suggestions)
                         .build();
     }
-    private static Product product2(){
+    public static Product product2(){
+        List<ProductPreferenceChoice> preferences=new ArrayList<>();
+
+        List<AddOnItem> addOnItems=new ArrayList<>();
+        addOnItems.add(AddOnItem.builder().name("Chips").price(1).build());
+        addOnItems.add(AddOnItem.builder().name("Ketchup").price(0).build());
+        addOnItems.add(AddOnItem.builder().name("Mayo").price(0).build());
+        ProductAddOnChoice addOns=ProductAddOnChoice.builder().query("any sides ?").choiceOptions(addOnItems).build();
+        List<ProductSizeOptions> sizeOptions=new ArrayList<>();
+        sizeOptions.add(ProductSizeOptions.builder().inStock(true).unit("1 Portion").price(20.00).build());
+        sizeOptions.add(ProductSizeOptions.builder().inStock(true).unit("1.5 Portion").price(24.00).build());
+        //List<ProductSuggestion> suggestions=new ArrayList<>();
+        ProductSuggestion suggestions= ProductSuggestion.builder().question("Go large size").priceDifference(2).statement("comes with large chips and coke").build();
+        //List<Promotion> promotions=new ArrayList<>();
+
+        Promotion promotions= Promotion.builder().name("Lunch Time Deal").price(18).build();
         return
-                Product.builder().build();
+                Product.builder()
+                        .name("Doner Kebap")
+                        .allergens("Meat")
+                        .calories("400kcal")
+                        .descriptionShort("Special cut doner on pitta with sauces")
+                        .descriptionLong("Special cut doner on pitta with sauces. Served with Chips and meze")
+                        .imgUri("https://merkezlokantasi.com/wp-content/uploads/2018/05/merkez-kebabi.jpg")
+                        .ingredients("Lamb, Yoghurt, etc")
+                        .sku("2")
+                        .vatPercentage(20)
+                        .expectedServingTime("10 mins")
+                        .expectedServingTimeInMins(20)
+                        .group(ProductGroups.FOOD)
+                        .subgroup("Meat Foods")
+                        .preference(preferences)
+                        .addOns(addOns)
+                        .promotions(promotions)
+                        .sizeOptions(sizeOptions)
+                        .suggestions(suggestions)
+                        .build();
     }
-    private static Product product3(){
+    public static Product product3(){
+        List<ProductPreferenceChoice> preferences=new ArrayList<>();
+
+        List<AddOnItem> addOnItems=new ArrayList<>();
+        addOnItems.add(AddOnItem.builder().name("Chips").price(1).build());
+        addOnItems.add(AddOnItem.builder().name("Ketchup").price(0).build());
+        addOnItems.add(AddOnItem.builder().name("Mayo").price(0).build());
+        ProductAddOnChoice addOns=ProductAddOnChoice.builder().query("any sides ?").choiceOptions(addOnItems).build();
+        List<ProductSizeOptions> sizeOptions=new ArrayList<>();
+        sizeOptions.add(ProductSizeOptions.builder().inStock(true).unit("1 Portion").price(20.00).build());
+        sizeOptions.add(ProductSizeOptions.builder().inStock(true).unit("1.5 Portion").price(24.00).build());
+        //List<ProductSuggestion> suggestions=new ArrayList<>();
+        ProductSuggestion suggestions= ProductSuggestion.builder().question("Go large size").priceDifference(2).statement("comes with large chips and coke").build();
+        //List<Promotion> promotions=new ArrayList<>();
+
+        Promotion promotions= Promotion.builder().name("Lunch Time Deal").price(18).build();
         return
-                Product.builder().build();
+                Product.builder()
+                        .name("Lobster")
+                        .allergens("sea food")
+                        .calories("400kcal")
+                        .descriptionShort("Special cut doner on pitta with sauces")
+                        .descriptionLong("Special cut doner on pitta with sauces. Served with Chips and meze")
+                        .imgUri("https://merkezlokantasi.com/wp-content/uploads/2018/05/merkez-kebabi.jpg")
+                        .ingredients("Lamb, Yoghurt, etc")
+                        .sku("3")
+                        .vatPercentage(20)
+                        .expectedServingTime("10 mins")
+                        .expectedServingTimeInMins(20)
+                        .group(ProductGroups.FOOD)
+                        .subgroup("Sea Foods")
+                        .preference(preferences)
+                        .addOns(addOns)
+                        .promotions(promotions)
+                        .sizeOptions(sizeOptions)
+                        .suggestions(suggestions)
+                        .build();
     }
-    private static Product product4(){
+    public static Product product4(){
+        List<ProductPreferenceChoice> preferences=new ArrayList<>();
+
+        List<AddOnItem> addOnItems=new ArrayList<>();
+        addOnItems.add(AddOnItem.builder().name("Chips").price(1).build());
+        addOnItems.add(AddOnItem.builder().name("Ketchup").price(0).build());
+        addOnItems.add(AddOnItem.builder().name("Mayo").price(0).build());
+        ProductAddOnChoice addOns=ProductAddOnChoice.builder().query("any sides ?").choiceOptions(addOnItems).build();
+        List<ProductSizeOptions> sizeOptions=new ArrayList<>();
+        sizeOptions.add(ProductSizeOptions.builder().inStock(true).unit("1 Portion").price(20.00).build());
+        sizeOptions.add(ProductSizeOptions.builder().inStock(true).unit("1.5 Portion").price(24.00).build());
+        //List<ProductSuggestion> suggestions=new ArrayList<>();
+        ProductSuggestion suggestions= ProductSuggestion.builder().question("Go large size").priceDifference(2).statement("comes with large chips and coke").build();
+        //List<Promotion> promotions=new ArrayList<>();
+
+        Promotion promotions= Promotion.builder().name("Lunch Time Deal").price(18).build();
         return
-                Product.builder().build();
+                Product.builder()
+                        .name("Grilled Sea Bream")
+                        .allergens("Meat")
+                        .calories("400kcal")
+                        .descriptionShort("Special cut doner on pitta with sauces")
+                        .descriptionLong("Special cut doner on pitta with sauces. Served with Chips and meze")
+                        .imgUri("https://merkezlokantasi.com/wp-content/uploads/2018/05/merkez-kebabi.jpg")
+                        .ingredients("Lamb, Yoghurt, etc")
+                        .sku("4")
+                        .vatPercentage(20)
+                        .expectedServingTime("10 mins")
+                        .expectedServingTimeInMins(20)
+                        .group(ProductGroups.FOOD)
+                        .subgroup("Sea Foods")
+                        .preference(preferences)
+                        .addOns(addOns)
+                        .promotions(promotions)
+                        .sizeOptions(sizeOptions)
+                        .suggestions(suggestions)
+                        .build();
     }
     private static Product product5(){
         return

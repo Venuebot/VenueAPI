@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import venuebot.model.product.Deal;
 import venuebot.model.product.Product;
+import venuebot.model.product.ProductList;
 
 import java.util.List;
 
@@ -19,8 +20,8 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GetMenuResponse {
     private Venue venue;
-    private List<Product> foodsList;
-    private List<Product> drinksList;
-    private List<Product> dessertsList;
+    private List<ProductList> foodsList;
+    private List<ProductList> drinksList;
+    private List<ProductList> dessertsList;
     private List<Deal> dealsList;
 }

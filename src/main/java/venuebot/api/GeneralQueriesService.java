@@ -42,15 +42,15 @@ public class GeneralQueriesService {
     @RequestMapping(value="/tempAddProduct/{venueId}",method= RequestMethod.PUT)
     public ResponseEntity<String> loginInitiated(@PathVariable("venueId") int venueId,@RequestBody Product product)  {
         if(DemoBuffer.ht_products_foods.containsKey(venueId)){
-            List<Product> list=DemoBuffer.ht_products_foods.get(venueId);
-            list.add(product);
-            DemoBuffer.ht_products_foods.remove(venueId);
-            DemoBuffer.ht_products_foods.put(venueId,list);
+//            List<Product> list=DemoBuffer.ht_products_foods.get(venueId);
+//            list.add(product);
+//            DemoBuffer.ht_products_foods.remove(venueId);
+//            DemoBuffer.ht_products_foods.put(venueId,list);
         }
         else{
-            List<Product> list=new ArrayList<>();
-            list.add(product);
-            DemoBuffer.ht_products_foods.put(venueId,list);
+//            List<Product> list=new ArrayList<>();
+//            list.add(product);
+//            DemoBuffer.ht_products_foods.put(venueId,list);
         }
         return new ResponseEntity<String>("OK", HttpStatus.OK);
     }
