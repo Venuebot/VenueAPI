@@ -47,7 +47,7 @@ public class GeneralServ {
 
        return GetMenuResponse.builder().foodsList(DemoBuffer.ht_products_foods.get(venueId))
                .drinksList(DemoBuffer.ht_products_drinks.get(venueId))
-               .drinksList(DemoBuffer.ht_products_desserts.get(venueId))
+               .dessertsList(DemoBuffer.ht_products_desserts.get(venueId))
                .dealsList(DemoBuffer.ht_products_deals.get(venueId))
                .venue(DemoBuffer.ht_venues.get(venueId))
         .build();

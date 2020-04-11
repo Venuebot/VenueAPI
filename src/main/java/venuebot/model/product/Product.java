@@ -38,8 +38,8 @@ public class Product {
 
     // Preference: Do you ask any question for  customers to choose ?
     // example : How cooked would you prefer your Steak ?
-    private List<ProductPreferenceChoice> preference; // medium, rare, well done
-
+    //private List<ProductPreferenceChoice> preference; // medium, rare, well done
+    ProductPreferenceChoice preference;
     // Add ons: Ketchup, Mayo, sauce
     // example : How cooked would you prefer your Steak ?
     //private List<ProductAddOnChoice> addOns; // medium, rare, well done

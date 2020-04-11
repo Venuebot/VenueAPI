@@ -49,6 +49,7 @@ public class App  {
 
     }
     private static void initVenueMenu(){
+        // Foods
         List<Product> list=new ArrayList<>();
         list.add(tempGeneral.product1());
         list.add(tempGeneral.product2());
@@ -59,6 +60,32 @@ public class App  {
         lists_subGroup1.add(new ProductList("Meat Foods",list));
         lists_subGroup1.add(new ProductList("Sea Foods",list2));
         DemoBuffer.ht_products_foods.put(1,lists_subGroup1);
+
+        // Drinks
+        List<Product> list_b=new ArrayList<>();
+        list_b.add(tempGeneral.product5());
+
+        List<Product> list2_b=new ArrayList<>();
+        list2_b.add(tempGeneral.product6());
+        list2_b.add(tempGeneral.product7());
+
+        List<ProductList> lists_subGroup1_b=new ArrayList<>();
+        lists_subGroup1_b.add(new ProductList("Wines",list_b));
+        lists_subGroup1_b.add(new ProductList("Cocktails",list2_b));
+        DemoBuffer.ht_products_drinks.put(1,lists_subGroup1_b);
+
+        // Desserts
+        List<Product> list_c=new ArrayList<>();
+        list_c.add(tempGeneral.product8());
+        list_c.add(tempGeneral.product9());
+        List<Product> list2_c=new ArrayList<>();
+        list2_c.add(tempGeneral.product10());
+
+        List<ProductList> lists_subGroup1_c=new ArrayList<>();
+        lists_subGroup1_c.add(new ProductList("Cakes",list_c));
+        lists_subGroup1_c.add(new ProductList("Ice Creams",list2_c));
+        DemoBuffer.ht_products_desserts.put(1,lists_subGroup1_c);
+
     }
 
 }
