@@ -3,6 +3,7 @@ package venuebot.util;
 import io.swagger.models.auth.In;
 import venuebot.model.CustomerUser;
 import venuebot.model.Venue;
+import venuebot.model.enums.OrderStatus;
 import venuebot.model.product.Deal;
 import venuebot.model.product.Product;
 import venuebot.model.product.ProductList;
@@ -28,4 +29,6 @@ public class DemoBuffer {
     public static Hashtable<Integer,List<ProductList>> ht_products_drinks =new Hashtable<>();
     public static Hashtable<Integer,List<ProductList>> ht_products_desserts =new Hashtable<>();
     public static Hashtable<Integer,List<Deal>> ht_products_deals =new Hashtable<>();
+
+    public static Hashtable<String, OrderStatus> ht_orderStatus=new Hashtable<>();
 }

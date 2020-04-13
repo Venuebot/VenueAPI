@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import venuebot.model.enums.OrderStatus;
 import venuebot.model.enums.OrderType;
 import venuebot.model.order.DealItem;
 import venuebot.model.order.ProductItem;
@@ -18,13 +19,8 @@ import java.util.List;
 @Builder
 @JsonRootName("OrderRequest")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class OrderRequest {
-    int venueId;
-    int customerId;
-    OrderType orderType;
-    String tableNo;
-    String address;
-    List<ProductItem> products;
-    List<DealItem> deals;
-
+public class OrderStatusResponse {
+    String orderId;
+    OrderStatus orderStatus;
+    String msgFromVenue;
 }

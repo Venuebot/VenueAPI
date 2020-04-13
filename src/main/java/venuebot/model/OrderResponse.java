@@ -18,13 +18,8 @@ import java.util.List;
 @Builder
 @JsonRootName("OrderRequest")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class OrderRequest {
-    int venueId;
-    int customerId;
-    OrderType orderType;
-    String tableNo;
-    String address;
-    List<ProductItem> products;
-    List<DealItem> deals;
+public class OrderResponse {
+    String orderId;
+    String msgFromVenue;
 
 }
